@@ -49,7 +49,7 @@ const App: React.FC = () => {
       content: (
         <div className="space-y-8">
           <p className="text-3xl font-extralight tracking-tight text-slate-500 dark:text-slate-400 text-balance">
-            La infraestructura definitiva para el <span className="text-slate-900 dark:text-white font-normal">periodismo digital</span> de alto rendimiento.
+            La infraestructura definitiva para el <span className=" font-bold italic text-[#ffcc00]">periodismo digital</span> de alto rendimiento.
           </p>
           <div className="flex items-center space-x-6">
             <button className="group relative flex items-center space-x-3 bg-bling px-8 py-4 overflow-hidden shadow-lg shadow-bling/20">
@@ -173,7 +173,7 @@ const App: React.FC = () => {
     },
   ];
 
-  const scrollToSlide = (index: number) => {
+  const scrollToSlide = useCallback((index: number) => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({
         left: index * window.innerWidth,
@@ -181,7 +181,15 @@ const App: React.FC = () => {
       });
       setCurrentSlide(index);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const next = (currentSlide + 1) % slides.length;
+      scrollToSlide(next);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [currentSlide, scrollToSlide, slides.length]);
 
   useEffect(() => {
     const handleScroll = () => {
