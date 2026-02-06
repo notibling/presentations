@@ -72,17 +72,17 @@ const App: React.FC = () => {
       subtitle: 'Motor de Visibilidad Publicitaria',
       content: (
         <div className="space-y-6">
-          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+          <p  className="text-lg md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
             Algoritmos de posicionamiento basados en <strong className="text-[#FFCC00] font-normal">puntos calientes de atención</strong>. La publicidad deja de ser invasiva para volverse parte del flujo informativo.
           </p>
           <div className="grid grid-cols-1 gap-4 pt-4">
             <div className="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-lg">
                 <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Precision-Targeting</span>
-                <span className="text-bling font-bebas text-2xl">99.8% ACCURACY</span>
+                <span className="text-bling font-bebas text-xl md:text-2xl">99.8% ACCURACY</span>
             </div>
             <div className="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-lg">
                 <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Responsive Ratios</span>
-                <span className="text-bling font-bebas text-2xl">ANY ASPECT RATIO</span>
+                <span className="text-bling font-bebas text-xl md:text-2xl">ANY ASPECT RATIO</span>
             </div>
           </div>
         </div>
@@ -95,14 +95,14 @@ const App: React.FC = () => {
       subtitle: 'Catálogo Exclusivo para Empresas',
       content: (
         <div className="space-y-6">
-          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+          <p  className="text-lg md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
             Más que un catálogo, es un <strong className="text-[#FFCC00] font-normal">índice de autoridad</strong>. Solo marcas verificadas con altos estándares de calidad editorial pueden acceder a este espacio.
           </p>
           <div className="space-y-4">
             <div className="h-1 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-bling w-2/3"></div>
             </div>
-            <p className="text-xs font-light text-slate-500 dark:text-slate-400">Saturación del Catálogo Actual: 66% • Espacios limitados por categoría.</p>
+            <p className="text-[10px] md:text-xs font-light text-slate-500 dark:text-slate-400">Saturación del Catálogo Actual: 66% • Espacios limitados por categoría.</p>
           </div>
         </div>
       ),
@@ -114,17 +114,17 @@ const App: React.FC = () => {
       subtitle: 'Authority through Context',
       content: (
         <div className="space-y-6">
-          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+          <p  className="text-lg md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
             Integración de marcas en el núcleo de la noticia.<strong className="text-[#FFCC00] font-normal italic"> Una referencia en BlingNews equivale a una recomendación de experto</strong> en tiempo real.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 bg-slate-100 dark:bg-transparent border border-slate-200 dark:border-white/5 rounded-xl text-center">
-                <p className="text-4xl font-bebas text-bling">365D</p>
-                <p className="text-[10px] uppercase tracking-widest text-slate-400">Ciclo de Referencia</p>
+                <p className="text-3xl md:text-4xl font-bebas text-bling">365D</p>
+                <p className="text-[9px] uppercase tracking-widest text-slate-400">Ciclo de Referencia</p>
             </div>
             <div className="p-4 bg-slate-100 dark:bg-transparent border border-slate-200 dark:border-white/5 rounded-xl text-center">
-                <p className="text-4xl font-bebas text-bling">API</p>
-                <p className="text-[10px] uppercase tracking-widest text-slate-400">Integración Directa</p>
+                <p className="text-3xl md:text-4xl font-bebas text-bling">API</p>
+                <p className="text-[9px] uppercase tracking-widest text-slate-400">Integración Directa</p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const App: React.FC = () => {
       subtitle: 'Visualización Profunda de Datos',
       content: (
         <div className="space-y-4">
-          <p className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+          <p className="text-lg md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
             Nuestras métricas van más allá del clic. Medimos el <strong className="text-[#FFCC00] font-normal italic">tiempo de permanencia y la profundidad de scroll</strong> para entender el interés real.
           </p>
           <StatsChart theme={theme} />

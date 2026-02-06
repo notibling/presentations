@@ -8,7 +8,7 @@ interface SlideProps {
 
 const Slide: React.FC<SlideProps> = ({ slide }) => {
   return (
-    <div className="slide w-screen h-screen flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden relative">
+    <div className="slide w-screen h-screen flex flex-col items-center justify-center p-4 md:p-12 overflow-hidden relative">
       
       {/* Background Decorative Layer */}
       {slide.image && (
@@ -25,20 +25,20 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
         </div>
       )}
 
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:col-span-12 lg:grid-cols-12 gap-6 md:gap-12 items-center z-10">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:col-span-12 lg:grid-cols-12 gap-4 md:gap-12 items-center z-10">
         
         {/* Text Content Area */}
-        <div className="lg:col-span-6 space-y-4 md:space-y-6 order-2 lg:order-1">
+        <div className="lg:col-span-6 space-y-3 md:space-y-6 order-2 lg:order-1">
           <header className="relative space-y-2 md:space-y-1">
             {slide.subtitle && (
               <div className="flex items-center space-x-3">
                 <span className="h-px w-8 md:w-6 bg-bling"></span>
-                <p className="text-bling font-semibold tracking-[0.4em] uppercase text-[10px] md:text-[10px] font-montserrat">
+                <p className="text-bling font-semibold tracking-[0.4em] uppercase text-[9px] md:text-[10px] font-montserrat">
                   {slide.subtitle}
                 </p>
               </div>
             )}
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bebas leading-[0.85] text-slate-800 dark:text-white transition-all">
+            <h1 className="text-4xl md:text-7xl xl:text-8xl font-bebas leading-[0.85] text-slate-800 dark:text-white transition-all">
               {slide.title}
             </h1>
           </header>
@@ -50,14 +50,14 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
 
         {/* Media / Visual Area */}
         {slide.image && (
-          <div className="lg:col-span-6 relative flex justify-center items-center order-1 lg:order-2 mb-4 lg:mb-0">
+          <div className="lg:col-span-6 relative flex justify-center items-center order-1 lg:order-2 mb-2 lg:mb-0">
             <div className="absolute w-[120%] h-[120%] bg-bling/5 blur-[60px] md:blur-[100px] rounded-full"></div>
             
-            <div className="relative p-1 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden group max-w-[85%] lg:max-w-full mx-auto">
+            <div className="relative p-1 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden group max-w-[90%] lg:max-w-full mx-auto">
               <img 
                 src={slide.image} 
                 alt={slide.title}
-                className="w-full h-auto max-h-[30vh] md:max-h-[50vh] lg:max-h-[60vh] object-cover rounded-xl md:rounded-2xl transform transition-transform duration-1000 group-hover:scale-[1.03]"
+                className="w-full h-auto max-h-[25vh] md:max-h-[50vh] lg:max-h-[60vh] object-cover rounded-xl md:rounded-2xl transform transition-transform duration-1000 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.05] to-transparent h-20 w-full animate-[scan_4s_linear_infinite] pointer-events-none"></div>
             </div>
@@ -66,7 +66,7 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
       </div>
       
       {/* Decorative Watermark */}
-      <div className="absolute bottom-24 md:bottom-32 left-4 md:left-16 text-[5rem] md:text-9xl lg:text-[15rem] font-bebas opacity-[0.02] dark:opacity-[0.03] pointer-events-none select-none -z-10 text-slate-900 dark:text-white leading-none">
+      <div className="absolute bottom-24 md:bottom-32 left-4 md:left-16 text-[4rem] md:text-9xl lg:text-[15rem] font-bebas opacity-[0.02] dark:opacity-[0.03] pointer-events-none select-none -z-10 text-slate-900 dark:text-white leading-none hidden md:block">
         {slide.title.split(' ')[0]}
       </div>
 
