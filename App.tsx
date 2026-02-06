@@ -72,17 +72,17 @@ const App: React.FC = () => {
       subtitle: 'Motor de Visibilidad Publicitaria',
       content: (
         <div className="space-y-6">
-          <p  className="text-balance">
-            Algoritmos de posicionamiento basados en <strong className="text-[#FFCC00]">puntos calientes de atención</strong>. La publicidad deja de ser invasiva para volverse parte del flujo informativo.
+          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+            Algoritmos de posicionamiento basados en <strong className="text-[#FFCC00] font-normal">puntos calientes de atención</strong>. La publicidad deja de ser invasiva para volverse parte del flujo informativo.
           </p>
           <div className="grid grid-cols-1 gap-4 pt-4">
             <div className="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-lg">
-                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">Precision-Targeting</span>
-                <span className="text-bling font-bebas text-xl">99.8% ACCURACY</span>
+                <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Precision-Targeting</span>
+                <span className="text-bling font-bebas text-2xl">99.8% ACCURACY</span>
             </div>
             <div className="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-lg">
-                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">Responsive Ratios</span>
-                <span className="text-bling font-bebas text-xl">ANY ASPECT RATIO</span>
+                <span className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Responsive Ratios</span>
+                <span className="text-bling font-bebas text-2xl">ANY ASPECT RATIO</span>
             </div>
           </div>
         </div>
@@ -95,8 +95,8 @@ const App: React.FC = () => {
       subtitle: 'Catálogo Exclusivo para Empresas',
       content: (
         <div className="space-y-6">
-          <p  className="text-balance">
-            Más que un catálogo, es un <strong className="text-[#FFCC00]">índice de autoridad</strong>. Solo marcas verificadas con altos estándares de calidad editorial pueden acceder a este espacio.
+          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+            Más que un catálogo, es un <strong className="text-[#FFCC00] font-normal">índice de autoridad</strong>. Solo marcas verificadas con altos estándares de calidad editorial pueden acceder a este espacio.
           </p>
           <div className="space-y-4">
             <div className="h-1 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -114,17 +114,17 @@ const App: React.FC = () => {
       subtitle: 'Authority through Context',
       content: (
         <div className="space-y-6">
-          <p  className="text-balance">
-            Integración de marcas en el núcleo de la noticia.<strong className="text-[#FFCC00] font-bold italic"> Una referencia en BlingNews equivale a una recomendación de experto</strong> en tiempo real.
+          <p  className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+            Integración de marcas en el núcleo de la noticia.<strong className="text-[#FFCC00] font-normal italic"> Una referencia en BlingNews equivale a una recomendación de experto</strong> en tiempo real.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 bg-slate-100 dark:bg-transparent border border-slate-200 dark:border-white/5 rounded-xl text-center">
-                <p className="text-3xl font-bebas text-bling">365D</p>
-                <p className="text-[9px] uppercase tracking-widest text-slate-400">Ciclo de Referencia</p>
+                <p className="text-4xl font-bebas text-bling">365D</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-400">Ciclo de Referencia</p>
             </div>
             <div className="p-4 bg-slate-100 dark:bg-transparent border border-slate-200 dark:border-white/5 rounded-xl text-center">
-                <p className="text-3xl font-bebas text-bling">API</p>
-                <p className="text-[9px] uppercase tracking-widest text-slate-400">Integración Directa</p>
+                <p className="text-4xl font-bebas text-bling">API</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-400">Integración Directa</p>
             </div>
           </div>
         </div>
@@ -137,8 +137,8 @@ const App: React.FC = () => {
       subtitle: 'Visualización Profunda de Datos',
       content: (
         <div className="space-y-4">
-          <p className="text-balance">
-            Nuestras métricas van más allá del clic. Medimos el <strong className="text-[#FFCC00] font-bold italic">tiempo de permanencia y la profundidad de scroll</strong> para entender el interés real.
+          <p className="text-2xl md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
+            Nuestras métricas van más allá del clic. Medimos el <strong className="text-[#FFCC00] font-normal italic">tiempo de permanencia y la profundidad de scroll</strong> para entender el interés real.
           </p>
           <StatsChart theme={theme} />
         </div>
@@ -264,16 +264,16 @@ const App: React.FC = () => {
       </div>
 
       {/* Top Header Fixed */}
-      <div className="fixed top-0 left-0 w-full z-[60] p-6 md:p-10 flex justify-between items-start pointer-events-none">
+      <div className="fixed top-0 left-0 w-full z-[60] p-4 md:p-10 flex justify-between items-start pointer-events-none">
         <div className="flex items-center space-x-4 md:space-x-6 pointer-events-auto group cursor-pointer">
             <Logo 
                 darkMode={theme === Theme.DARK} 
-                width={100} 
+                width={120} 
                 height={40} 
                 className="transition-transform duration-500 group-hover:scale-105"
             />
             <div className="flex flex-col hidden md:flex">
-                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">PRESENTACIONES</span>
+                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
             </div>
         </div>
         
@@ -295,7 +295,7 @@ const App: React.FC = () => {
       </div>
 
       {/* Navigation Footer */}
-      <div className="fixed bottom-0 left-0 w-full z-[60] p-6 md:p-10 flex justify-between items-end pointer-events-none">
+      <div className="fixed bottom-0 left-0 w-full z-[60] p-4 md:p-10 flex justify-between items-end pointer-events-none">
         
         {/* Left Side: Stats/Branding */}
         <div className="flex items-center space-x-4 md:space-x-8 pointer-events-auto">

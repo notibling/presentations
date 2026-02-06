@@ -33,7 +33,7 @@ const StatsChart: React.FC<StatsChartProps> = ({ theme = Theme.DARK }) => {
   };
 
   return (
-    <div className="h-64 w-full mt-10 bg-white/60 dark:bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-black/5 dark:border-white/5 relative overflow-hidden group transition-colors duration-500">
+    <div className="h-48 md:h-64 w-full mt-6 md:mt-10 bg-white/60 dark:bg-black/20 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-black/5 dark:border-white/5 relative overflow-hidden group transition-colors duration-500">
       <div className="absolute top-4 left-6 flex items-center space-x-2">
         <div className="w-2 h-2 rounded-full bg-bling animate-pulse"></div>
         <span className="text-[10px] font-mono tracking-widest opacity-50 uppercase text-slate-800 dark:text-white">Live Performance Index</span>
