@@ -229,25 +229,25 @@ const App: React.FC = () => {
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
       
       {/* Navigation Controls (Floating Arrows) */}
-      <div className="fixed inset-y-0 left-0 w-24 flex items-center justify-center z-50 group pointer-events-none">
+      <div className="fixed inset-y-0 left-0 w-16 md:w-24 flex items-center justify-center z-50 group pointer-events-none">
         {currentSlide > 0 && (
             <button 
                 onClick={() => scrollToSlide(currentSlide - 1)}
-                className="pointer-events-auto p-4 transition-all hover:translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
+                className="pointer-events-auto p-3 md:p-4 transition-all hover:translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
         )}
       </div>
-      <div className="fixed inset-y-0 right-0 w-24 flex items-center justify-center z-50 group pointer-events-none">
+      <div className="fixed inset-y-0 right-0 w-16 md:w-24 flex items-center justify-center z-50 group pointer-events-none">
         {currentSlide < slides.length - 1 && (
             <button 
                 onClick={() => scrollToSlide(currentSlide + 1)}
-                className="pointer-events-auto p-4 transition-all hover:-translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
+                className="pointer-events-auto p-3 md:p-4 transition-all hover:-translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
             </button>
@@ -255,25 +255,25 @@ const App: React.FC = () => {
       </div>
 
       {/* Top Header Fixed */}
-      <div className="fixed top-0 left-0 w-full z-[60] p-10 flex justify-between items-start pointer-events-none">
-        <div className="flex items-center space-x-6 pointer-events-auto group cursor-pointer">
-            <div className="w-14 h-14 bg-slate-900 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center font-bebas text-4xl shadow-2xl relative transition-transform duration-500 group-hover:rotate-12">
+      <div className="fixed top-0 left-0 w-full z-[60] p-6 md:p-10 flex justify-between items-start pointer-events-none">
+        <div className="flex items-center space-x-4 md:space-x-6 pointer-events-auto group cursor-pointer">
+            <div className="w-10 h-10 md:w-14 md:h-14 bg-slate-900 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center font-bebas text-2xl md:text-4xl shadow-2xl relative transition-transform duration-500 group-hover:rotate-12">
                 BLING
             </div>
             <div className="flex flex-col">
-                <span className="font-bebas text-4xl tracking-[0.25em] leading-none text-slate-900 dark:text-white">BLING NEWS</span>
-                <span className="text-[9px] tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
+                <span className="font-bebas text-2xl md:text-4xl tracking-[0.25em] leading-none text-slate-900 dark:text-white">BLING NEWS</span>
+                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
             </div>
         </div>
         
-        <div className="flex flex-col items-end space-y-2 pointer-events-auto">
-            <div className="flex items-center space-x-2 text-[10px] font-mono tracking-widest text-slate-600 dark:text-slate-400">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <div className="flex flex-col items-end space-y-1 md:space-y-2 pointer-events-auto">
+            <div className="flex items-center space-x-2 text-[8px] md:text-[10px] font-mono tracking-widest text-slate-600 dark:text-slate-400">
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-500 animate-pulse"></span>
                 <span>EN LINEA</span>
             </div>
-            <div className="text-right">
-                <p className="text-[10px] mb-2 font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest">[BN 03541] - URUGUAY</p>
-                <p className="text-bling font-bebas text-xl leading-none">V-4.2 / BLING-PRESENTATIONS</p>
+            <div className="text-right hidden sm:block">
+                <p className="text-[8px] md:text-[10px] mb-1 md:mb-2 font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest">[BN 03541] - URUGUAY</p>
+                <p className="text-bling font-bebas text-lg md:text-xl leading-none">V-4.2 / BLING-PRESENTATIONS</p>
             </div>
         </div>
       </div>
@@ -284,15 +284,15 @@ const App: React.FC = () => {
       </div>
 
       {/* Navigation Footer */}
-      <div className="fixed bottom-0 left-0 w-full z-[60] p-10 flex justify-between items-end pointer-events-none">
+      <div className="fixed bottom-0 left-0 w-full z-[60] p-6 md:p-10 flex justify-between items-end pointer-events-none">
         
         {/* Left Side: Stats/Branding */}
-        <div className="flex items-center space-x-8 pointer-events-auto">
+        <div className="flex items-center space-x-4 md:space-x-8 pointer-events-auto">
             <div className="flex flex-col">
-                <p className="text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-1">Current Session</p>
-                <p className="font-bebas text-2xl tracking-[0.1em] text-slate-800 dark:text-white">{time}</p>
+                <p className="text-[7px] md:text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] md:tracking-[0.4em] mb-1">Current Session</p>
+                <p className="font-bebas text-xl md:text-2xl tracking-[0.1em] text-slate-800 dark:text-white">{time}</p>
             </div>
-            <div className="h-8 w-px bg-slate-200 dark:bg-white/10 hidden md:block"></div>
+            <div className="h-6 md:h-8 w-px bg-slate-200 dark:bg-white/10 hidden md:block"></div>
             <div className="hidden md:flex flex-col">
                 <p className="text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-1">Company Group</p>
                 <p className="font-bebas text-2xl tracking-[0.1em] text-slate-800/80 dark:text-white/80">BLINGCOMPANY ©26</p>
@@ -300,30 +300,30 @@ const App: React.FC = () => {
         </div>
 
         {/* Center: Slide Indicators */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-8 pb-2 pointer-events-auto">
-            <div className="flex items-center space-x-4">
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-4 md:space-x-8 pb-2 pointer-events-auto">
+            <div className="flex items-center space-x-2 md:space-x-4">
                 {slides.map((_, idx) => (
                     <button
                         key={idx}
                         onClick={() => scrollToSlide(idx)}
                         className={`transition-all duration-700 h-[2px] ${
-                            currentSlide === idx ? 'w-16 bg-bling' : 'w-4 bg-slate-300 dark:bg-white/10 hover:bg-bling/40'
+                            currentSlide === idx ? 'w-10 md:w-16 bg-bling' : 'w-2 md:w-4 bg-slate-300 dark:bg-white/10 hover:bg-bling/40'
                         }`}
                         aria-label={`Go to slide ${idx + 1}`}
                     />
                 ))}
             </div>
-            <div className="font-mono text-[10px] tracking-widest text-slate-500 dark:text-slate-400">
+            <div className="font-mono text-[8px] md:text-[10px] tracking-widest text-slate-500 dark:text-slate-400">
                 PAGE {String(currentSlide + 1).padStart(2, '0')}
             </div>
         </div>
 
         {/* Right Side: Security/Status */}
         <div className="flex flex-col items-end pointer-events-auto">
-            <div className="w-32 h-[2px] bg-slate-200 dark:bg-white/5 mb-4 relative overflow-hidden">
+            <div className="w-24 md:w-32 h-[2px] bg-slate-200 dark:bg-white/5 mb-2 md:mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-bling transition-all duration-700" style={{ width: `${progress}%` }}></div>
             </div>
-            <p className="text-[8px] font-mono tracking-[0.5em] text-slate-400 dark:text-slate-500 uppercase">Encrypted Presentation Mode</p>
+            <p className="text-[6px] md:text-[8px] font-mono tracking-[0.3em] md:tracking-[0.5em] text-slate-400 dark:text-slate-500 uppercase">Encrypted Presentation Mode</p>
         </div>
       </div>
 
