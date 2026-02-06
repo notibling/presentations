@@ -268,12 +268,12 @@ const App: React.FC = () => {
         <div className="flex items-center space-x-4 md:space-x-6 pointer-events-auto group cursor-pointer">
             <Logo 
                 darkMode={theme === Theme.DARK} 
-                width={120} 
+                width={100} 
                 height={40} 
                 className="transition-transform duration-500 group-hover:scale-105"
             />
             <div className="flex flex-col hidden md:flex">
-                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
+                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">PRESENTACIONES</span>
             </div>
         </div>
         
