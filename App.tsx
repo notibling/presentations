@@ -4,6 +4,7 @@ import { Theme, SlideData } from './types';
 import ThemeToggle from './components/ThemeToggle';
 import Slide from './components/Slide';
 import StatsChart from './components/StatsChart';
+import { Logo } from './components/Logo';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(Theme.DARK);
@@ -241,7 +242,7 @@ const App: React.FC = () => {
         {currentSlide > 0 && (
             <button 
                 onClick={() => scrollToSlide(currentSlide - 1)}
-                className="pointer-events-auto p-3 md:p-4 transition-all hover:translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
+                className="pointer-events-auto p-3 md:p-4 transition-all hover:translate-x-2 opacity-20 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -253,7 +254,7 @@ const App: React.FC = () => {
         {currentSlide < slides.length - 1 && (
             <button 
                 onClick={() => scrollToSlide(currentSlide + 1)}
-                className="pointer-events-auto p-3 md:p-4 transition-all hover:-translate-x-2 opacity-0 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
+                className="pointer-events-auto p-3 md:p-4 transition-all hover:-translate-x-2 opacity-20 group-hover:opacity-100 bg-white/20 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-slate-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -265,11 +266,13 @@ const App: React.FC = () => {
       {/* Top Header Fixed */}
       <div className="fixed top-0 left-0 w-full z-[60] p-6 md:p-10 flex justify-between items-start pointer-events-none">
         <div className="flex items-center space-x-4 md:space-x-6 pointer-events-auto group cursor-pointer">
-            <div className="w-10 h-10 md:w-14 md:h-14 bg-slate-900 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center font-bebas text-2xl md:text-4xl shadow-2xl relative transition-transform duration-500 group-hover:rotate-12">
-                BLING
-            </div>
-            <div className="flex flex-col">
-                <span className="font-bebas text-2xl md:text-4xl tracking-[0.25em] leading-none text-slate-900 dark:text-white">BLING NEWS</span>
+            <Logo 
+                darkMode={theme === Theme.DARK} 
+                width={120} 
+                height={40} 
+                className="transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="flex flex-col hidden md:flex">
                 <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
             </div>
         </div>

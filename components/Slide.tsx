@@ -28,22 +28,22 @@ const Slide: React.FC<SlideProps> = ({ slide }) => {
       <div className="max-w-7xl w-full grid grid-cols-1 lg:col-span-12 lg:grid-cols-12 gap-8 md:gap-12 items-center z-10">
         
         {/* Text Content Area */}
-        <div className="lg:col-span-6 space-y-6 md:space-y-10">
-          <header className="relative space-y-2 md:space-y-4">
+        <div className="lg:col-span-6 space-y-4 md:space-y-6">
+          <header className="relative space-y-1 md:space-y-1">
             {slide.subtitle && (
-              <div className="flex items-center space-x-4">
-                <span className="h-px w-6 md:w-8 bg-bling"></span>
+              <div className="flex items-center space-x-3">
+                <span className="h-px w-5 md:w-6 bg-bling"></span>
                 <p className="text-bling font-semibold tracking-[0.4em] uppercase text-[9px] md:text-[10px] font-montserrat">
                   {slide.subtitle}
                 </p>
               </div>
             )}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-bebas leading-[0.85] text-slate-800 dark:text-white transition-all">
+            <h1 className="p-3 md:p-0 text-7xl xl:text-8xl font-bebas leading-[0.9] text-slate-800 dark:text-white transition-all">
               {slide.title}
             </h1>
           </header>
           
-          <div className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light font-montserrat max-w-lg border-l-2 border-yellow-500 dark:border-yellow-500 pl-6 md:pl-8">
+          <div className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-light font-montserrat max-w-lg ">
             {slide.content}
           </div>
         </div>
