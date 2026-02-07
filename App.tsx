@@ -92,7 +92,7 @@ const App: React.FC = () => {
     {
       id: 'catalog',
       title: 'CATÁLOGO',
-      subtitle: 'Catálogo Exclusivo para Empresas',
+      subtitle: 'Exclusivo para Empresas',
       content: (
         <div className="space-y-6">
           <p  className="text-lg md:text-3xl font-light text-slate-600 dark:text-slate-300 text-balance leading-relaxed">
@@ -215,7 +215,7 @@ const App: React.FC = () => {
           slide.image && (
             <div
               key={slide.id}
-              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+              className={`absolute  inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
                 currentSlide === index ? 'opacity-20 dark:opacity-10' : 'opacity-0'
               }`}
               style={{ 
@@ -268,12 +268,12 @@ const App: React.FC = () => {
         <div className="flex items-center space-x-4 md:space-x-6 pointer-events-auto group cursor-pointer">
             <Logo 
                 darkMode={theme === Theme.DARK} 
-                width={120} 
-                height={40} 
+                width={window.innerWidth < 768 ? 80 : 80} 
+                height={window.innerWidth < 768 ? 40 : 40} 
                 className="transition-transform duration-500 group-hover:scale-105"
             />
             <div className="flex flex-col hidden md:flex">
-                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Online Presentations</span>
+                <span className="text-[7px] md:text-[9px] tracking-[0.4em] md:tracking-[0.6em] font-mono text-slate-500 dark:text-slate-400 uppercase mt-1">Presentations</span>
             </div>
         </div>
         
@@ -284,7 +284,7 @@ const App: React.FC = () => {
             </div>
             <div className="text-right hidden sm:block">
                 <p className="text-[8px] md:text-[10px] mb-1 md:mb-2 font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest">[BN 03541] - URUGUAY</p>
-                <p className="text-bling font-bebas text-lg md:text-xl leading-none">V-4.2 / BLING-PRESENTATIONS</p>
+               
             </div>
         </div>
       </div>
@@ -306,7 +306,7 @@ const App: React.FC = () => {
             <div className="h-6 md:h-8 w-px bg-slate-200 dark:bg-white/10 hidden md:block"></div>
             <div className="hidden md:flex flex-col">
                 <p className="text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-1">Company Group</p>
-                <p className="font-bebas text-2xl tracking-[0.1em] text-slate-800/80 dark:text-white/80">BLINGCOMPANY ©26</p>
+                <p className="font-bebas text-2xl tracking-[0.1em] text-slate-800/80 dark:text-white/80"><span className="text-bling">BLING</span><span className="">COMPANY</span>&nbsp;&copy;&nbsp;2026</p>
             </div>
         </div>
 
