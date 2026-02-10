@@ -64,7 +64,7 @@ const App: React.FC = () => {
           </div>
         </div>
       ),
-      image: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=1200',
+      image: 'images/avif/presentation-news.avif',
     },
     {
       id: 'ads',
@@ -87,7 +87,7 @@ const App: React.FC = () => {
           </div>
         </div>
       ),
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200',
+      image: 'images/avif/presentation-ads.avif',
     },
     {
       id: 'catalog',
@@ -106,7 +106,7 @@ const App: React.FC = () => {
           </div>
         </div>
       ),
-      image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200',
+      image: 'images/avif/presentation-catalog.avif',
     },
     {
       id: 'references',
@@ -172,6 +172,120 @@ const App: React.FC = () => {
       ),
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200',
     },
+    {
+  id: 'jobs',
+  title: 'EMPLEOS',
+  subtitle: 'Bling Jobs',
+  accent: true,
+  content: (
+    <div className="space-y-10">
+      <p className="text-4xl font-extralight leading-tight text-slate-800 dark:text-white text-balance">
+        Conectamos <span className="italic font-bold text-[#FFCC00]">talento real</span> con empresas que buscan <span className="italic font-bold text-[#FFCC00]">crecer mejor</span>.
+      </p>
+
+      <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Un espacio diseñado para que las empresas publiquen oportunidades, reciban postulaciones calificadas
+        y utilicen herramientas inteligentes de captación, filtrado y contacto directo con candidatos.
+      </p>
+
+      <div className="flex flex-col space-y-4 pt-10 border-t border-slate-200 dark:border-white/10">
+        <div className="flex items-center space-x-6">
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">For Companies</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-bling">RECLUTAMIENTO EFICIENTE</p>
+          </div>
+
+          <div className="h-10 w-px bg-slate-200 dark:bg-white/10"></div>
+
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">For Talent</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-slate-800 dark:text-slate-200">
+              POSTULACIONES SIMPLES
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+  image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200',
+},
+
+{
+  id: 'surveys',
+  title: 'ENCUESTAS',
+  subtitle: 'Bling Insights',
+  accent: true,
+  content: (
+    <div className="space-y-10">
+      <p className="text-4xl font-extralight leading-tight text-slate-800 dark:text-white text-balance">
+        Decisiones basadas en <span className="italic font-bold text-[#FFCC00]">datos reales</span>, no en suposiciones.
+      </p>
+
+      <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Las empresas podrán crear encuestas propias y obtener respuestas directas del público de BlingNews,
+        validando ideas, productos, precios y percepciones con información accionable.
+      </p>
+
+      <div className="flex flex-col space-y-4 pt-10 border-t border-slate-200 dark:border-white/10">
+        <div className="flex items-center space-x-6">
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Market Research</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-bling">INSIGHTS DEL PÚBLICO</p>
+          </div>
+
+          <div className="h-10 w-px bg-slate-200 dark:bg-white/10"></div>
+
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Audience</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-slate-800 dark:text-slate-200">
+              RESPUESTAS CALIFICADAS
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+},
+{
+  id: 'services',
+  title: 'SERVICIOS',
+  subtitle: 'Bling Services',
+  accent: true,
+  content: (
+    <div className="space-y-10">
+      <p className="text-4xl font-extralight leading-tight text-slate-800 dark:text-white text-balance">
+        Sus servicios frente a una <span className="italic font-bold text-[#FFCC00]">audiencia activa</span> que ya está consumiendo contenido.
+      </p>
+
+      <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Las empresas podrán exhibir sus servicios dentro de BlingNews, integrados de forma contextual en una
+        plataforma con miles de visitantes orgánicos por hora, transformando visibilidad en oportunidades reales.
+      </p>
+
+      <div className="flex flex-col space-y-4 pt-10 border-t border-slate-200 dark:border-white/10">
+        <div className="flex items-center space-x-6">
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Visibility</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-bling">TRÁFICO ORGÁNICO</p>
+          </div>
+
+          <div className="h-10 w-px bg-slate-200 dark:bg-white/10"></div>
+
+          <div>
+            <p className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Business</p>
+            <p className="text-lg font-bebas tracking-[0.2em] text-slate-800 dark:text-slate-200">
+              CONTACTOS CALIFICADOS
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+  image: 'https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&q=80&w=1200',
+},
+
+
   ];
 
   const scrollToSlide = useCallback((index: number) => {
